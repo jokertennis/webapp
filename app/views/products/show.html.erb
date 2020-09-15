@@ -1,0 +1,28 @@
+<h2><%= @product.title %></h2>
+<h3>商品説明</h3>
+<p>あらすじ：<%= @product.overview %></p>
+<p>発売日：<%= @product.release_date %></p>
+<p>ジャンル：
+<% for genres in @hash_genres %>
+<%= genres["name"]+"," %>
+<% end %>
+</p>
+<p>言語：
+<% for spoken_languages in @hash_spoken_languages %>
+<%= spoken_languages["name"]+"," %>
+<% end %>
+</p>
+<p>製作会社：
+<% for production_companies in @hash_production_companies %>
+<%= production_companies["name"]+"," %>
+<% end %>
+</p>
+<p>製作国：
+<% for production_countries in @hash_production_countries %>
+<%= production_countries["name"]+"," %>
+<% end %>
+</p>
+<div>
+	<%= button_to "カートに入れる",{controller: 'carts',action: 'add_item'},{method: :post,params: {title: @product.title},
+	class: "small_button"} %>
+</div>

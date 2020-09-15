@@ -1,0 +1,31 @@
+<style type="text/css">
+	body{
+		background-color: #FFCC99;
+		color: white;
+	}
+	.button {
+		font-size:50px;
+		text-align:center;
+		color:#fff;
+		background-color:black;
+		margin-left:300px;
+	}
+</style>
+
+<h2 style="color: #FFFF66;
+	text-align:center;
+	margin: 50px;
+	font-size:70px">
+	映画検索
+</h2>
+
+<p>
+	<%=link_to '映画のタイトルで検索&gt;&gt;'.html_safe,{action:'title_search'},class: "button" %>
+</p>
+<p>
+	<%=link_to '映画の発売年で検索&gt;&gt;'.html_safe,{action:'release_date_search'},class: "button" %>
+</p>
+<p>
+	<%=link_to '映画のジャンルで検索&gt;&gt;'.html_safe,{action:'genres_search'},class: "button" %>
+</p>
+

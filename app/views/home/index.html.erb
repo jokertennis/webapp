@@ -1,0 +1,14 @@
+<h1>洋画ECサイト</h1>
+<p>
+	<%= button_to "検索",{:controller => :search, :action => :index},{method: :get, class: "button"} %>
+</p>
+<p>
+	<%= button_to "ログイン・新規会員登録",{:controller => :hello, :action => :index},{method: :get, class: "button"} %>
+</p>
+<p>
+	<%= button_to "カート",{:controller => :carts, :action => :show},{method: :get, class: "button"} %>
+</p>
+<p>
+	<%= button_to "自己紹介",{:controller => :home, :action => :introduce},{method: :get, class: "button"} %>
+</p>
+

@@ -1,0 +1,56 @@
+<style type="text/css">
+	body{
+		background-color: #FFCC99;
+		color: white;
+		text-align:center;
+	}
+	h2{
+		color: #FFFF66;
+		text-align:center;
+		margin: 50px;
+		font-size:40px
+	}
+	h3{
+		color: #FFFF66;
+		text-align:center;
+		font-size:30px;
+	}
+	.button{
+		color:black;
+		background-color:color:#fff;
+	}
+	.link{
+	color:blue;
+}
+</style>
+
+<h2>カート内の商品一覧</h2>
+<table border="1" align="center">
+	<tr><th>商品名</th><th>税込み価格</th><th>商品を削除する</th></tr>
+	<% @cart_items.each do |item| %>
+	<tr>
+		<td><%= item.title %></td><td>200円</td><td><%= button_to "削除",{controller: 'carts',action: 'delete_item'},{method: :delete,params: {title: item.title},class: "button"} %></td>
+	</tr>
+	<% end %>
+</table>
+
+<p>総額：<%= 200*@cart_items.size %>円</p>
+
+<p><%= button_to "カート内の商品を購入",{controller: 'carts',action: 'purchase_item'},{method: :post,class: "button"} %></p>
+
+<p style="color: blue"><%= @msg %></p>
+
+<div>
+	<%=link_to '&lt;&lt;トップページへ戻る'.html_safe,home_index_path,{class: "link"}%>
+</div>
+
+<h3>購入履歴</h3>
+
+<table border="1" align="center">
+	<tr><th>商品名</th><th>税込み価格</th></tr>
+	<% @cart_purchased_items.each do |purchased_item| %>
+	<tr>
+		<td><%= purchased_item.title %></td><td>200円</td>
+	</tr>
+	<% end %>
+</table>

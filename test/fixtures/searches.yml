@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id: 1
+  title: MyText
+  release_date: 2020-05-21
+  genres: MyText
+
+two:
+  id: 1
+  title: MyText
+  release_date: 2020-05-21
+  genres: MyText

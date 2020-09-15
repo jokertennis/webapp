@@ -1,0 +1,9 @@
+<h2>ログイン画面</h2>
+<!--ログイン処理-->
+<div>
+	<%=link_to 'ログイン&gt;&gt;'.html_safe,{action:'login_check'},{class: "link"} %>
+</div>
+<!--ログアウト処理-->
+<div>
+	<%= link_to "サインアウト&gt;&gt;".html_safe,destroy_account_session_path,{method: :delete,class: "link"} %>
+</div>

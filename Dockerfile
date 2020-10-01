@@ -9,6 +9,9 @@ RUN apt-get update -qq && \
                        nodejs
 
 
+#vimを利用するためにインストール
+RUN apt-get update && apt-get -y install vim
+
 # yarnパッケージ管理ツールインストール
 RUN apt-get update && apt-get install -y curl apt-transport-https wget && \
     curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - && \
@@ -34,3 +37,5 @@ ADD . /webapp
 
 # puma.sockを配置するディレクトリを作成。コンテナ内に作ることに注意。
 RUN mkdir -p tmp/sockets
+
+CMD bundle exec puma -C config/puma.rb

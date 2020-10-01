@@ -16,10 +16,14 @@ default: &default
 
 development:
   <<: *default
-  database: production_db
-  username: <%= ENV["RDS_USER"] %>
-  password: <%= ENV["RDS_PASSWORD"] %>
-  host: testdb.ckbpbmtagojm.ap-northeast-1.rds.amazonaws.com
+  database: webapp_development
+  username: <%= ENV["MYSQL_USER"] %>
+  password: <%= ENV["MYSQL_PASSWORD"] %>
+  host: db
+  # database: production_db
+  # username: <%= ENV["RDS_USER"] %>
+  # password: <%= ENV["RDS_PASSWORD"] %>
+  # host: testdb.ckbpbmtagojm.ap-northeast-1.rds.amazonaws.com
 
 
 # Warning: The database defined as "test" will be erased and

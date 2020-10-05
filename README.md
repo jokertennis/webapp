@@ -24,7 +24,7 @@ webサーバ :nginx
 
 ## インフラ構成図
 
-https://github.com/jokertennis/webapp/blob/master/%E3%82%A4%E3%83%B3%E3%83%95%E3%83%A9%E8%A8%AD%E8%A8%88%E5%9B%B3.png?raw=true
+![インフラ設計図](https://user-images.githubusercontent.com/48274379/95052080-435aa680-0729-11eb-841c-bc68e77b8431.png)
 
 ## データベース設計図
 

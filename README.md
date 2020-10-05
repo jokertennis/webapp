@@ -28,7 +28,7 @@ webサーバ :nginx
 
 ## データベース設計
 
-![データベース設計図](https://user-images.githubusercontent.com/48274379/95076501-e7a21480-074c-11eb-94e5-3cb550f83d38.png)
+![データベース設計図](https://user-images.githubusercontent.com/48274379/95077406-68addb80-074e-11eb-9c90-33140baf2715.png)
 
 ## 文責
 

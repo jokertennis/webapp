@@ -20,13 +20,15 @@ Webアプリケーションフレームワーク :Ruby on Rails6.0.3
 ライブラリ :numpy,pandas(データの加工に利用)  
 webサーバ :nginx  
 アプリケーションサーバ :puma  
-インフラ　:AWS(VPC,ECS(EC2),RDS,ECR,CloudWatch),Docker
+インフラ :AWS(VPC,ECS(EC2),RDS,ECR,CloudWatch),Docker
 
 ## インフラ構成図
 
 ![インフラ設計図](https://user-images.githubusercontent.com/48274379/95052080-435aa680-0729-11eb-841c-bc68e77b8431.png)
 
-## データベース設計図
+## データベース設計
+
+![データベース設計図](https://user-images.githubusercontent.com/48274379/95076501-e7a21480-074c-11eb-94e5-3cb550f83d38.png)
 
 ## 文責
 

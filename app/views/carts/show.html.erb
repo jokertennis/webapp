@@ -24,6 +24,7 @@
 }
 </style>
 
+<!--カートに入っている商品を表示している。カート内の商品を取り消すこともできる。-->
 <h2>カート内の商品一覧</h2>
 <table border="1" align="center">
 	<tr><th>商品名</th><th>税込み価格</th><th>商品を削除する</th></tr>
@@ -33,9 +34,10 @@
 	</tr>
 	<% end %>
 </table>
-
+<!--カート内の商品をすべて購入した場合、いくらになるか表示している。-->
 <p>総額：<%= 200*@cart_items.size %>円</p>
 
+<!--ユーザーがクリックするすると、カート内の商品が購入される-->
 <p><%= button_to "カート内の商品を購入",{controller: 'carts',action: 'purchase_item'},{method: :post,class: "button"} %></p>
 
 <p style="color: blue"><%= @msg %></p>
@@ -45,7 +47,7 @@
 </div>
 
 <h3>購入履歴</h3>
-
+<!--購入履歴を表示している。これはユーザーが同じ商品を購入することを防ぐため。-->
 <table border="1" align="center">
 	<tr><th>商品名</th><th>税込み価格</th></tr>
 	<% @cart_purchased_items.each do |purchased_item| %>

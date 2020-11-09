@@ -19,15 +19,17 @@
 <h2 class="display-4 text-primary">
 	映画検索
 </h2>
+
 <p>
 	<%= @msg %>
 </p>
-<!--枠を囲ってみると良いかも。-->
+
+<!--ジャンルの一覧を表示している-->
 <% @genres.each do |item| %>
 <%= link_to item,genres: item %>
 <% end %>
 
-<!--検索で条件に合うタイトルを表示する。メッセージも忘れずに。-->
+<!--検索で条件に合うタイトルを表示する。-->
 <% @movies.each do | movie | %>
     <p><%= link_to movie.title,product_path(movie.title) %></p>
 <% end %>

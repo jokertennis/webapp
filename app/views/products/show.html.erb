@@ -3,26 +3,31 @@
 <p>あらすじ：<%= @product.overview %></p>
 <p>発売日：<%= @product.release_date %></p>
 <p>ジャンル：
+<!--対応するジャンルをすべて表示している-->
 <% for genres in @hash_genres %>
 <%= genres["name"]+"," %>
 <% end %>
 </p>
 <p>言語：
+<!--対応する言語をすべて表示している-->
 <% for spoken_languages in @hash_spoken_languages %>
 <%= spoken_languages["name"]+"," %>
 <% end %>
 </p>
 <p>製作会社：
+<!--対応する製作会社をすべて表示している-->
 <% for production_companies in @hash_production_companies %>
 <%= production_companies["name"]+"," %>
 <% end %>
 </p>
 <p>製作国：
+<!--対応する製作国をすべて表示している-->
 <% for production_countries in @hash_production_countries %>
 <%= production_countries["name"]+"," %>
 <% end %>
 </p>
 <div>
+	<!--ボタンをユーザーがクリックすることで、商品がカートの中に入る-->
 	<%= button_to "カートに入れる",{controller: 'carts',action: 'add_item'},{method: :post,params: {title: @product.title},
 	class: "small_button"} %>
 </div>

@@ -21,14 +21,13 @@
 <p>
 	<%= @msg %>
 </p>
+
+<!--1900～2020までの数字を出力し、各々の数字にリンクを張る。-->
 <% for release_year in 1900..2020 do %>
 <%= link_to release_year=(1900+2020)-release_year,year: release_year %>
 <% end %>
 
-<!--検索で条件に合うタイトルを表示する。メッセージも忘れずに。-->
+<!--検索で条件に合うタイトルを表示する。-->
 <% @movies.each do | movie | %>
     <p><%= link_to movie.title,product_path(movie.title) %></p>
 <% end %>
-<p>
-	<%= @msgs %>
-</p>

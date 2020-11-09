@@ -18,13 +18,15 @@
 	font-size:70px">
 	映画検索
 </h2>
-
+<!--ユーザーがクリックするとタイトルで検索するページへ飛ぶリンク-->
 <p>
 	<%=link_to '映画のタイトルで検索&gt;&gt;'.html_safe,{action:'title_search'},class: "button" %>
 </p>
+<!--ユーザーがクリックすると発売年で検索するページへ飛ぶリンク-->
 <p>
 	<%=link_to '映画の発売年で検索&gt;&gt;'.html_safe,{action:'release_date_search'},class: "button" %>
 </p>
+<!--ユーザーがクリックするとジャンルで検索するページへ飛ぶリンク-->
 <p>
 	<%=link_to '映画のジャンルで検索&gt;&gt;'.html_safe,{action:'genres_search'},class: "button" %>
 </p>

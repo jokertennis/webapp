@@ -1,7 +1,7 @@
 <h2><%= current_account.name %>様。<br>映画の世界へようこそ!</h2>
 <p style="text-align: center;"><%=@msg%></p>
 <hr>
-<!--戻るリンクをクリックすると、/indexに飛ぶようにする。-->
+<!--戻るリンクをクリックすると、ホームページに飛ぶようにする。-->
 <div>
 	<%=link_to '&lt;&lt;トップページへ戻る'.html_safe,home_index_path,{class: "link"}%>
 </div>

@@ -27,15 +27,15 @@
 	<%= @msg %>
 </p>
 
+<!--映画名の入力欄である。-->
 <div>
 	<%= form_tag("/search/title_search",method: :get) do %>
-	<label for="titlefind">映画の検索</label>
 	<%= text_field_tag(:title) %>
 	<%= submit_tag("Click") %>
 	<% end %>
 </div>
 
-<!--検索で条件に合うタイトルを表示する。メッセージも忘れずに。-->
+<!--検索で条件に合うタイトルを表示する。-->
 <% @movies.each do | movie | %>
     <p><%= link_to movie.title,product_path(movie.title) %></p>
 <% end %>

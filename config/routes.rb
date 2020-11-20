@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 	root 'top#index'
+	get '/top/finish'
 	get '/home/index'
 	get '/home', to: 'home#index'
 	get '/home/introduce' => 'home#introduce'
@@ -17,6 +18,7 @@ Rails.application.routes.draw do
 	end
 
 	resources :products,param: :title
+	resources :reviews,param: :product_id
 	get '/carts/show' => 'carts#show'
 	get '/carts/purchased_show' => 'carts#purchased_show'
 	post '/carts/add_item' => 'carts#add_item'

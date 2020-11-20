@@ -9,6 +9,7 @@ class ProductsController < ApplicationController
 			@hash_production_companies = JSON.parse(@product.production_companies)
 			@hash_production_countries = JSON.parse(@product.production_countries)
 			@hash_spoken_languages = JSON.parse(@product.spoken_languages)
+			@reviews = @product.reviews.all()
 		end
 	end
 end

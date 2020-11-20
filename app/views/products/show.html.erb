@@ -31,3 +31,19 @@
 	<%= button_to "カートに入れる",{controller: 'carts',action: 'add_item'},{method: :post,params: {title: @product.title},
 	class: "small_button"} %>
 </div>
+
+
+<h4>感想(<%= @msg %>)</h4>
+<%= button_to '感想を書く', new_review_path,{method: :get,params: {product_id: @product.id},class: "very_small_button"} %>
+
+<% for review_each in @reviews %>
+<p>
+	<%= review_each.title.delete!("{title}=> ") %>
+</p>	
+<p>
+	<%= review_each.review.delete!("{reviews}=> ") %>
+</p>
+
+<% end %>
+
+

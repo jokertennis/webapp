@@ -1,0 +1,17 @@
+<%= form_with(model: review, local: true) do |form| %>
+  <div class="field">
+    <%= form.hidden_field :product_id, value: @product_id %>
+  </div>
+
+  <div class="field">
+    <%= form.text_area :title %>
+  </div>
+
+  <div class="field">
+    <%= form.text_area :review %>
+  </div>
+
+  <div>
+    <input type="submit" name="submit" value="レビューを投稿" style="color:black;">
+  </div>
+<% end %>

@@ -4,7 +4,10 @@
 テストユーザーをご利用いただけます。  
 メールアドレス test@gmail.com  
 パスワード testpass  
-URL http://54.250.98.235/home
+URL http://54.250.98.235/home  
+
+![webアプリケーション](https://user-images.githubusercontent.com/48274379/107312870-c6737b00-6ad4-11eb-8866-0c322b0916c9.gif)
+
 
 ## webアプリケーションの特徴
 

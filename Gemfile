@@ -5,6 +5,10 @@ ruby '2.6.5'
 
 gem 'devise'
 
+#devise-i18nはdeviseのメッセージなどを日本語にする
+gem 'devise-i18n'
+gem 'devise-i18n-views'
+
 #secret_key_baseの生成・管理に必要
 gem 'dotenv-rails'
 
@@ -36,6 +40,7 @@ gem 'bootsnap', '>= 1.4.2', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'rspec-rails','~> 3.6.0'
 end
 
 group :development do
@@ -45,6 +50,7 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'spring-commands-rspec'
 end
 
 group :test do

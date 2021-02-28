@@ -16,7 +16,7 @@ class CartsController < ApplicationController
 		if current_account.cart.nil?
 			@cart = Cart.create(account_id: current_account.id)
 		else
-			@cart = Cart.find(current_account.cart.id)
+			@cart = current_account.cart
 		end
 	end
 

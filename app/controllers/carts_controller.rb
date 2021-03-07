@@ -1,7 +1,7 @@
 class CartsController < ApplicationController
 	protect_from_forgery with: :exception
 	before_action :authenticate_account!
-	before_action :set_up_item!, only: [:add_item,:delete_item]
+	before_action :set_up_item!, only: [:add_item]
 
 	#配列を各メソッドで定義するのはコードの重複になるので、定義している。
 	def initialize

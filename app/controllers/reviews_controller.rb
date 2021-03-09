@@ -33,6 +33,7 @@ class ReviewsController < ApplicationController
     # reviewテーブルのパラメータ
     def review_params
       { product_id: current_product.id,account_id: current_account.id,
-        title: params.require(:review).permit(:title),review: params.require(:review).permit(:review)}
+        title: params.require(:review).permit(:title),
+        review: params.require(:review).permit(:review)}
     end
 end

@@ -38,10 +38,10 @@
 
 <% for review_each in @reviews %>
 <p>
-	<%= review_each.title.delete!("{title}=> ") %>
+	<%= review_each.title %>
 </p>	
 <p>
-	<%= review_each.review.delete!("{reviews}=> ") %>
+	<%= review_each.review %>
 </p>
 
 <% end %>

@@ -24,9 +24,16 @@ class ReviewsController < ApplicationController
   # POST /reviews.json
   def create
     #レビューを作成
-    @review = Review.create(review_params)
-    #感想を投稿しましたというメッセージを表示するページへ飛ぶようにする(redirect_toの利用。)
-    redirect_to top_finish_path
+    @review = Review.new(review_params)
+    #レビューの作成が成功した場合
+    if @review.save
+    	#感想を投稿しましたというメッセージを表示するページへ飛ぶようにする(redirect_toの利用。)
+    	redirect_to top_finish_path
+    #レビューの作成が失敗した場合
+    else
+    	#エラー文を返す
+    	render "new"
+    end
   end
 
   private

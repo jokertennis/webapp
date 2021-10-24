@@ -1,5 +1,5 @@
 # ベースイメージ
-FROM ruby:2.6.5
+FROM ruby:3.0.2
 
 # nodejsとyarnはwebpackをインストールする際に必要
 

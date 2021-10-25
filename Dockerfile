@@ -29,6 +29,9 @@ WORKDIR /webapp
 ADD Gemfile /webapp/Gemfile
 ADD Gemfile.lock /webapp/Gemfile.lock
 
+# 参考文献https://teratail.com/questions/242179
+RUN gem update --system && gem install bundler:2.1.4
+
 # bundle installの実行
 RUN bundle install
 

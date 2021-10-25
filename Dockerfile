@@ -25,12 +25,18 @@ RUN mkdir /webapp
 # 各種命令を実行するためのカレントディレクトリを指定
 WORKDIR /webapp
 
+# 参考文献https://www.adoclib.com/blog/ec2-instance-could-not-locate-gemfile-or-bundle-directory.html
+RUN bundle init
+
 # ホストのGemfileとGemfile.lockをコンテナにコピー
-ADD Gemfile /webapp/Gemfile
+COPY Gemfile /webapp/Gemfile
 ADD Gemfile.lock /webapp/Gemfile.lock
 
-# 参考文献https://teratail.com/questions/242179
-RUN gem update --system && gem install bundler:2.1.4
+# 参考文献https://qiita.com/yunyun_engineer/items/a94e28a1cf5eb2c0ffdc
+ENV BUNDLER_VERSION 2.1.4
+RUN gem update --system \
+    && gem install bundler -v $BUNDLER_VERSION \
+    && bundle install -j 4
 
 # bundle installの実行
 RUN bundle install

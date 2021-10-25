@@ -3,6 +3,7 @@ services:
   app:
     build:
       context: .
+    image: f1712200682/webapp_app:latest
     env_file:
       - ./.env
     command: bundle exec puma -C config/puma.rb
@@ -14,7 +15,7 @@ services:
   db:
     build:
       context: ./containers/mysql
-    image: mysql:8.0
+    image: f1712200682/mysql:8.0
     env_file:
       - ./.env
     environment:
@@ -23,6 +24,7 @@ services:
   web:
     build:
       context: ./containers/nginx
+    image: f1712200682/webapp_web:latest
     volumes:
       - public-data:/webapp/public
       - tmp-data:/webapp/tmp

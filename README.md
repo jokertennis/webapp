@@ -2,9 +2,9 @@
 
 当webアプリケーションは洋画を視聴したい日本人のために作成した洋画専用のECサイトである。  
 テストユーザーをご利用いただけます。  
-メールアドレス test@gmail.com  
+メールアドレス test@example.com  
 パスワード testpass  
-URL http://54.250.98.235/home  
+URL http://35.76.243.67/home  
 
 ![webアプリケーション](https://user-images.githubusercontent.com/48274379/107312870-c6737b00-6ad4-11eb-8866-0c322b0916c9.gif)
 

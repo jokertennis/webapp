@@ -17,6 +17,7 @@ services:
     image: f1712200682/mysql:8.0
     platform: linux/x86_64
     environment:
+      MYSQL_DATABASE: webapp_development
       MYSQL_ROOT_HOST: "%"
       MYSQL_ROOT_PASSWORD: rootpass
   web:

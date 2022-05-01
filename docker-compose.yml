@@ -12,7 +12,8 @@ services:
       - log-data:/webapp/log
   db:
     build:
-      context: ./containers/mysql
+      context: .
+      dockerfile: ./containers/mysql/Dockerfile
     image: f1712200682/mysql:8.0
     platform: linux/x86_64
     environment:

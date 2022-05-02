@@ -64,8 +64,8 @@ webappディレクトリ直下へ移動する。(以降では、コンテナ内�
 以下の画像のように、コンテナが３つ立ち上がっていると良い。  
 <img width="1440" alt="スクリーンショット 2022-05-01 15 05 48" src="https://user-images.githubusercontent.com/48274379/166134391-fa5c25a3-608e-4bde-adf9-caca84f399d8.png">  
 
-dbコンテナへ入る。(webapp_db_1はdbコンテナのidでも良い。)  
-`docker exec -it webapp_db_1 bash`  
+dbコンテナへ入る。  
+`docker exec -it dbコンテナのid bash`  
 
 ルートディレクトリ直下でwebapp_developmentデータベースのリストアをする。(パスワードはrootpass)  
 `mysql -u root -p webapp_development < dump.sql`  

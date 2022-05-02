@@ -4,8 +4,6 @@ services:
     build:
       context: .
     image: f1712200682/webapp_app:latest
-    env_file:
-      - ./.env
     command: bundle exec puma -C config/puma.rb
     volumes:
       - webapp-data:/webapp
@@ -14,11 +12,12 @@ services:
       - log-data:/webapp/log
   db:
     build:
-      context: ./containers/mysql
+      context: .
+      dockerfile: ./containers/mysql/Dockerfile
     image: f1712200682/mysql:8.0
-    env_file:
-      - ./.env
+    platform: linux/x86_64
     environment:
+      MYSQL_DATABASE: webapp_development
       MYSQL_ROOT_HOST: "%"
       MYSQL_ROOT_PASSWORD: rootpass
   web:

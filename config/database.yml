@@ -18,8 +18,8 @@ default: &default
 development:
   <<: *default
   database: webapp_development
-  username: <%= ENV["MYSQL_USER"] %>
-  password: <%= ENV["MYSQL_PASSWORD"] %>
+  username: root
+  password: rootpass
   host: db
 
 
@@ -29,8 +29,8 @@ development:
 test:
   <<: *default
   database: webapp_test
-  username: <%= ENV["MYSQL_USER"] %>
-  password: <%= ENV["MYSQL_PASSWORD"] %>
+  username: root
+  password: rootpass
   host: db
 
 # As with config/credentials.yml, you never want to store sensitive information,

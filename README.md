@@ -42,6 +42,9 @@ https://www.docker.com/products/docker-desktop/
 DockerDesktopを起動状態にさせる。
 <img width="1440" alt="スクリーンショット 2022-05-01 13 18 43" src="https://user-images.githubusercontent.com/48274379/166132072-80d288a9-1f3f-44a4-950b-ee159ae60599.png">  
 
+DocckerDesktopを以下の画像のように設定する。(内容が違うとコンテナ立ち上げ時にエラーが起こる可能性がある)  
+<img width="1440" alt="スクリーンショット 2022-05-02 12 50 32" src="https://user-images.githubusercontent.com/48274379/166182097-cb5a9e9a-69f1-4a80-ad03-2d45a8131067.png">  
+
 Gitをインストールする。(Macの場合デフォルトで入っている)
 
 ## 手順

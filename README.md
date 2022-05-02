@@ -4,7 +4,6 @@
 テストユーザーをご利用いただけます。  
 メールアドレス test@example.com  
 パスワード testpass  
-URL http://35.76.243.67/home  
 
 ![webアプリケーション](https://user-images.githubusercontent.com/48274379/107312870-c6737b00-6ad4-11eb-8866-0c322b0916c9.gif)
 
@@ -32,11 +31,57 @@ webサーバ :nginx
 
 ![データベース設計図](https://user-images.githubusercontent.com/48274379/99858179-4c67e000-2bd0-11eb-81cb-a8fc56a888e8.png)
 
+## 環境構築手順
+
+### 事前準備
+環境構築時はMacBookを利用していることを想定している。(恐らくWindowsでも動くが、動作確認はしていない。)  
+
+Docker Desktopをインストールすること。  
+https://www.docker.com/products/docker-desktop/  
+
+DockerDesktopを起動状態にさせる。
+<img width="1440" alt="スクリーンショット 2022-05-01 13 18 43" src="https://user-images.githubusercontent.com/48274379/166132072-80d288a9-1f3f-44a4-950b-ee159ae60599.png">  
+
+Gitをインストールする。(Macの場合デフォルトで入っている)
+
+## 手順
+
+ローカルにリポジトリをcloneさせる。  
+
+`git clone https://github.com/jokertennis/webapp.git`  
+
+webappディレクトリ直下へ移動する。(以降では、コンテナ内でのコマンド実行を除き、webappディレクトリ直下でコマンドを実行する)  
+
+`cd webapp`  
+
+コンテナを立ち上げる。  
+
+`docker-compose up -d`  
+
+以下の画像のように、コンテナが３つ立ち上がっていると良い。  
+<img width="1440" alt="スクリーンショット 2022-05-01 15 05 48" src="https://user-images.githubusercontent.com/48274379/166134391-fa5c25a3-608e-4bde-adf9-caca84f399d8.png">  
+
+dbコンテナへ入る。(webapp_db_1はdbコンテナのidでも良い。)  
+`docker exec -it webapp_db_1 bash`  
+
+ルートディレクトリ直下でwebapp_developmentデータベースのリストアをする。(パスワードはrootpass)  
+`mysql -u root -p webapp_development < dump.sql`  
+
+dbコンテナから抜ける。  
+`exit`  
+
+[http://127.0.0.1](http://127.0.0.1)へアクセス。この画面が表示されたら、「Run pending migrate」をクリック。  
+<img width="1440" alt="スクリーンショット 2022-05-01 22 52 43" src="https://user-images.githubusercontent.com/48274379/166149016-c1c27c21-a19b-4f01-9491-3e355fd839fb.png">  
+
+以下の画面になると良い。  
+<img width="1440" alt="スクリーンショット 2022-05-01 22 55 23" src="https://user-images.githubusercontent.com/48274379/166149075-7555808e-fdb7-4f89-a06e-9a2ebba2002f.png">  
+
+以下のテストユーザーをご利用ください。  
+メールアドレス：test@example.com  
+パスワード：testpass  
 
 ## 文責
 
-北見工業大学地域未来デザイン工学科地域マネジメント工学コース4年  
-基盤コース：情報デザイン・コミュニケーション工学コース  
 川田剣士(カワタケンジ)
 
 ## ライセンス

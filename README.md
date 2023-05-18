@@ -27,9 +27,9 @@ webサーバ :nginx
 
 ![インフラ設計図](https://user-images.githubusercontent.com/48274379/95052080-435aa680-0729-11eb-841c-bc68e77b8431.png)
 
-## データベース設計
+## テーブル設計
 
-![データベース設計図](https://user-images.githubusercontent.com/48274379/99858179-4c67e000-2bd0-11eb-81cb-a8fc56a888e8.png)
+![テーブル設計図](https://user-images.githubusercontent.com/48274379/99858179-4c67e000-2bd0-11eb-81cb-a8fc56a888e8.png)
 
 ## 環境構築手順
 
